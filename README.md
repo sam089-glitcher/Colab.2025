@@ -1,4 +1,5 @@
-#Exploring Gemini: A Hands-on Guide with Google Generative AI in Colab 🔍🔮
+#**Exploring Gemini: A Hands-on Guide with Google Generative AI in Colab 🔍🔮**
+
 This project demonstrates how to integrate and interact with Google's Generative AI (Gemini) models using Python in a Google Colab environment. It includes various functionalities such as text generation, image-to-text generation, embeddings, and chat-based interactions.
 
 🚀 Features
