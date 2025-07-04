@@ -15,21 +15,25 @@ This project demonstrates how to integrate and interact with Google's Generative
 
 📦 Requirements
 Install the Google Generative AI client:
+
 pip install -q -U google-generativeai
 🔑 Setup
 
 Store your API key securely using Colab's userdata:
+
 from google.colab import userdata
 GOOGLE_API_KEY = userdata.get("GEMINI_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 
 🧪 Example Usage
+
 model = genai.GenerativeModel("gemini-1.5-flash")
 response = model.generate_content("What is India as a Power")
 print(response.text)
 
 🖼️ Image Generation Example
 Download and analyze an image:
+
 curl -o image.jpg https://voteforshivajijayanti.com/wp-content/uploads/2024/06/Chhatrapati-Shivaji-Maharaj-1.jpg
 Use it with Gemini to generate content:
 
@@ -39,6 +43,7 @@ response = model.generate_content(img)
 print(response.text)
 
 🧠 Embedding Example
+
 result = genai.embed_content(
     model="models/text-embedding-004",
     content="What is India as an emotion",
@@ -48,15 +53,18 @@ result = genai.embed_content(
 print(result["embedding"])
 
 💬 Chat Example
+
 chat = model.start_chat(history=[])
 response = chat.send_message("How does a computer work?")
 print(response.text)
 📁 Files Included
+
 welcome_to_colab.py: Python script generated from Colab showing the full implementation
 
 image.jpg: Sample image used for visual prompt input
 
 📌 Notes
+
 This project uses the Gemini 1.5 Flash model
 
 You need a valid Google API Key with the Generative Language API enabled
